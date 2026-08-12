@@ -31,7 +31,7 @@ class Robots(rule: ComposeTestRule) {
     val manualDose = ManualDoseRobot(overview, dialogs, pickers)
     val tags = TagsRobot(menus, dialogs)
     val notes = MedicineNotesRobot(menus)
-    val calendar = MedicineCalendarRobot(menus)
+    val calendar = MedicineCalendarRobot(ui, menus)
     val appIntro = AppIntroRobot(ui, menus)
     val alarm = AlarmScreenRobot()
     val shareSheet = ShareSheetRobot()

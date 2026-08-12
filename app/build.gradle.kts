@@ -155,7 +155,6 @@ dependencies {
     implementation(libs.simply.pdf)
     implementation(libs.gson)
     implementation(libs.appintro)
-    implementation(libs.calendar)
     implementation(libs.icondialog)
     implementation(libs.espresso.idling.resource)
     implementation(libs.espresso.idling.concurrent)

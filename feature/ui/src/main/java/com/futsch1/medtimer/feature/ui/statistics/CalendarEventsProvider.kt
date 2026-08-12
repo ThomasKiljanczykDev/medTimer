@@ -28,9 +28,9 @@ sealed interface CalendarEntry {
 }
 
 // The single calendar-month traversal: load events once, bucket past reminders and simulated future
-// reminders by day. Callers collect entriesFlow and map to their own leaf — CalendarDayEvent for the
-// Compose calendar (structuredEventsFlow) and the Spanned builder in CalendarEventsViewModel for the
-// legacy XML CalendarFragment. They differ only at the leaf; windowing, filtering, and reactivity live here.
+// reminders by day, and map each to a CalendarDayEvent. Shared by the Analysis calendar
+// (StatisticsScreenViewModel, all medicines) and the single-medicine calendar
+// (MedicineCalendarViewModel); they differ only in the medicine filter and the month window.
 class CalendarEventsProvider @Inject constructor(
     private val medicineRepository: MedicineRepository,
     private val reminderEventRepository: ReminderEventRepository,
@@ -40,7 +40,7 @@ class CalendarEventsProvider @Inject constructor(
 
     // Combines a Room-backed past-events flow (re-emits on DB writes) with the simulated future
     // reminders flow. Both sources drive reactivity independently.
-    fun entriesFlow(
+    private fun entriesFlow(
         medicineId: Int,
         pastMonths: Int
     ): Flow<Map<LocalDate, List<CalendarEntry>>> {
@@ -63,7 +63,7 @@ class CalendarEventsProvider @Inject constructor(
         }
     }
 
-    // The Compose calendar's leaf: the typed CalendarDayEvent stream over the entries flow.
+    // The calendar's leaf: the typed CalendarDayEvent stream over the entries flow.
     fun structuredEventsFlow(
         medicineId: Int,
         pastMonths: Int

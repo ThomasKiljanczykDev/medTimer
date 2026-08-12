@@ -82,7 +82,6 @@ dependencies {
     implementation(libs.androidx.documentfile)
     implementation(libs.simply.pdf)
     implementation(libs.color.picker)
-    implementation(libs.calendar)
     implementation(libs.icondialog)
     implementation(libs.flexbox)
     implementation(libs.preferencex)

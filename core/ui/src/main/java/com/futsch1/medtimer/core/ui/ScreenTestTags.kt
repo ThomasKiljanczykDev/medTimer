@@ -11,6 +11,7 @@ object ScreenTestTags {
     const val OVERVIEW = "screen_overview"
     const val MEDICINES = "screen_medicines"
     const val STATISTICS = "screen_statistics"
+    const val MEDICINE_CALENDAR = "screen_medicine_calendar"
 
     /** Every screen's [com.futsch1.medtimer.core.ui.component.MedTimerTopAppBar]. */
     const val TOP_APP_BAR = "screen_top_app_bar"

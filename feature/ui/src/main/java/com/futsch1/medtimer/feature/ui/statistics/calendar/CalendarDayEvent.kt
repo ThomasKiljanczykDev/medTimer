@@ -4,8 +4,8 @@ import com.futsch1.medtimer.core.domain.model.ReminderType
 import java.time.Duration
 import java.time.LocalDateTime
 
-// Structured calendar event consumed by the Compose calendar (DayEventsCard). The standalone XML
-// CalendarFragment still uses the Spanned-based flow on CalendarEventsViewModel for its icon rendering.
+// Structured calendar event consumed by the Compose calendar (DayEventsCard), shared by the Analysis
+// calendar and the single-medicine calendar.
 //
 // [time] is the reminded time (always shown). [takenTime] is the processed time, shown after an arrow
 // when the event was taken and the user opted to see taken times. [interval] is the elapsed time from

@@ -359,4 +359,5 @@ In brief:
   and [Material 3 Expressive](https://developer.android.com/develop/ui/compose/designsystems/material3/expressive).
 - [Now in Android](https://github.com/android/nowinandroid) — reference patterns for Hilt + Compose + multi-module.
 
-_Last reviewed: 2026-06-05 · Compose: adopted on the Statistics screen (StatisticsFragment → ComposeView); remaining screens still use XML layouts + Fragments. Icons standardised on Bootstrap Icons._
+_Last reviewed: 2026-08-12 · Compose: the app shell, Overview, Medicines, Statistics and the single-medicine calendar are Compose; Edit Medicine, the
+preference screens, the dialogs/sheets and the alarm screen still use XML layouts + Fragments. Icons standardised on Bootstrap Icons._
