@@ -32,7 +32,9 @@ class SingleTopAppBarPerPreferenceScreenTest {
         PrivacyPreferencesFragment::class.java,
         RepeatRemindersPreferencesFragment::class.java,
         WeekendModePreferencesFragment::class.java,
-        PreferencesFragment::class.java,
+        DisplaySettingsFragment::class.java,
+        NotificationSettingsFragment::class.java,
+        SnoozeSettingsFragment::class.java,
     )
 
     @Test

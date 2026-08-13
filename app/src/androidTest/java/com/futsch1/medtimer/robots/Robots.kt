@@ -20,7 +20,7 @@ class Robots(rule: ComposeTestRule) {
     val overview = OverviewRobot(ui)
     val medicines = MedicinesRobot(ui, navigation, dialogs)
     val statistics = StatisticsRobot(ui)
-    val settings = SettingsRobot(menus, preferences)
+    val settings = SettingsRobot(ui, menus, preferences)
     val notifications = NotificationShadeRobot()
 
     val reminderSettings = ReminderSettingsRobot(ui, preferences, pickers, dialogs)

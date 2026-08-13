@@ -19,6 +19,7 @@ import com.futsch1.medtimer.core.datastore.PreferencesDataSource.Companion.LOCAT
 import com.futsch1.medtimer.core.domain.model.HomeLocation
 import com.futsch1.medtimer.core.location.GeofenceRegistrar
 import com.futsch1.medtimer.core.location.LocationProvider
+import com.futsch1.medtimer.core.ui.preferences.MedTimerPreferenceFragment
 import com.futsch1.medtimer.feature.ui.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,7 +27,7 @@ import java.util.Locale
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SnoozeSettingsFragment : PreferencesFragment() {
+class SnoozeSettingsFragment : MedTimerPreferenceFragment() {
     @Inject
     lateinit var preferencesDataSource: PreferencesDataSource
 
